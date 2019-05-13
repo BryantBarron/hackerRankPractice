@@ -52,9 +52,6 @@ The results of the first query are formatted to the problem description’s spec
 The results of the second query are ascendingly ordered first by number of names corresponding to each profession (2 ≤ 2 ≤ 3 ≤ 3), and then alphabetically by profession (doctor ≤ singer, and actor ≤ professor).
 */
 
-SELECT CONCAT(Name, '(', LEFT(Occupation,1),')') FROM OCCUPATIONS ORDER BY Name;
-SELECT CONCAT('There are a total of ', COUNT(Occupation), ' ', LOWER(Occupation), 's.') FROM OCCUPATIONS GROUP BY Occupation ORDER BY COUNT(Occupation), Occupation;
-
 select concat(name, '(', left(Occupation, 1),')') from occupations order by name;
 select concat('There are a total of ', count(occupation), ' ', lower(occupation), 's.') from occupations
 group by occupation
